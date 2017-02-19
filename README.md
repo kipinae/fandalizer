@@ -1,5 +1,5 @@
 # Fandalizer
-Be a fandal.
+Be a fandal. View project at https://kipinae.github.io/fandalizer/
 
 ## What is Fandalizer?
 Fandalizer is a project inspired by the Facebook page [Taidevandalismi](https://www.facebook.com/taidevandalismi/). (in Finnish)
