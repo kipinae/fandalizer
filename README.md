@@ -12,3 +12,6 @@ The project will also serve as a meaningful way for me to learn more JS.
 
 ## To-do
 You can follow the project's public kanban at https://tree.taiga.io/project/kipinae-fandalizer/kanban
+
+## Image sources
+* [National Gallery of Art](https://images.nga.gov/)
