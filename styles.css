@@ -1,0 +1,13 @@
+body {
+  background: #000 url("img/argyle.png") repeat;
+  color: #eee;
+}
+
+h1 { font: 48px 'Calligraffitti', cursive; }
+p { font-family: 'Sansita', sans-serif; }
+a { color: #644023; }
+a:visited { color: #644023; }
+a:active { color: #0F0701; }
+a:hover { color: #A26F44; }
+
+footer img { margin: 0 5px 5px 0; }
