@@ -1,56 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Fandalizer</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+  <title>Fandalizer</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Calligraffitti|Sansita" rel="stylesheet">
-    <!-- jQuery -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <!-- Bootstrap -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    <!-- CSS & JavaScript -->
-    <link rel="stylesheet" href="styles.css">
-    <script src="fandalizer.js"></script>
-  </head>
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Calligraffitti|Sansita" rel="stylesheet">
+  <!-- jQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <!-- CSS & JavaScript -->
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/dropzone.js"></script>
+  <script src="js/fandalizer.js"></script>
 
-  <body class="text-center">
-    <div class="container">
-      <div class="row">
-        <div class="col-xs-12">
-          <h1>Fandalizer</h1>
-          <p class="lead">Block of text.</p>
-        </div>
+  <script type="text/javascript">
+
+    Dropzone.autoDiscover = false;
+
+    $(document).ready(function () {
+      $("#dropzone").dropzone({
+        maxFiles: 1,
+        url: "/ajax_file_upload_handler/",
+        success: function (file, response) {
+          console.log(response);
+        }
+      });
+    })
+
+  </script>
+
+</head>
+
+<body class="text-center">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <h1>Fandalizer</h1>
       </div>
-      <div class="row">
-        <div class="col-xs-12">
-          <canvas id="canvas" width="200" height="100" style="border: 1px #fff solid;">Your browser doesn't support canvas elements.</canvas>
-        </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="dropzone" id="dropzone"></div>
       </div>
-      <div class="row">
-        <div class="col-xs-12">
-          <p>Inspired by <a href="https://www.facebook.com/taidevandalismi/">Taidevandalismi</a>.</p>
-        </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12">
+        <p>Inspired by <a href="https://www.facebook.com/taidevandalismi/">Taidevandalismi</a>.</p>
       </div>
-      <div class="row">
+    </div>
+    <div class="row">
       <footer class="navbar-fixed-bottom">
         <div class="col-sm-8">
           <p class="text-left"><small>Credits: <a href="https://www.iconfinder.com/rohitink" title="Icons">Icons</a>
-            | <a href="https://www.toptal.com/designers/subtlepatterns/" title="Background">Background</a>
-            | All paintings are public domain. Full list of recources can be found on <a href="https://github.com/kipinae/fandalizer">GitHub project page</a>.</small></p>
-        </div>
-        <div class="col-sm-4">
-           <div class="pull-right">
-            <a href="https://github.com/kipinae" title="GitHub"><img src="img/github.png" width="50" height="50" alt="GitHub" /></a>
-            <a href="https://twitter.com/kipinae" title="Twitter"><img src="img/twitter.png" width="50" height="50" alt="Twitter" /></a>
+            | <a href="https://www.toptal.com/designers/subtlepatterns/" title="Background">Background</a></small></p>
           </div>
-        </div>
-      </footer>
+          <div class="col-sm-4">
+            <div class="pull-right">
+              <a href="https://github.com/kipinae" title="GitHub"><img src="img/github.png" width="50" height="50" alt="GitHub" /></a>
+              <a href="https://twitter.com/kipinae" title="Twitter"><img src="img/twitter.png" width="50" height="50" alt="Twitter" /></a>
+            </div>
+          </div>
+        </footer>
       </div>
     </div>
   </body>
 
-</html>
+  </html>
