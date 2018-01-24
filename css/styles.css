@@ -1,5 +1,5 @@
 body {
-  background: #000 url("img/argyle.png") repeat;
+  background: #000 url("../img/argyle.png") repeat;
   color: #eee;
 }
 
@@ -11,3 +11,10 @@ a:active { color: #0F0701; }
 a:hover { color: #A26F44; }
 
 footer img { margin: 0 5px 5px 0; }
+
+#dropzone {
+  display: block;
+  padding: 50px;
+  margin-bottom: 20px;
+  border: 1px dotted;
+}
